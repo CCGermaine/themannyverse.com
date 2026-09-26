@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
-export default defineConfig({
-  // GitHub Pages serves from a project subpath:
-  // https://ccgermaine.github.io/themannyverse.com/
-  base: '/themannyverse.com/',
+export default defineConfig(({ command }) => ({
+  // When building for production, serve from the root of themannyverse.com
+  // When running locally, also serve from root
+  base: '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
@@ -13,4 +13,4 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
   },
-})
+}))
