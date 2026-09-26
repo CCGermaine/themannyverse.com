@@ -1,22 +1,17 @@
 name: Deploy to GitHub Pages
 
-on:
+"on":
   push:
     branches: [main]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
 permissions:
   contents: read
-  deployments: write
   pages: write
   id-token: write
 
-# Deploy a bundled Actions workflow as a container
-# https://docs.github.com/en/actions/webhooks/wildcard-events
 concurrency:
   group: pages
-  url: ${{ steps.deployment.outputs.pages_url }}
+  url: ${{ steps.deployment.outputs.page_url }}
 
 jobs:
   build:
