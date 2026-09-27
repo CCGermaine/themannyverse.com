@@ -65,8 +65,8 @@ document.querySelector('#app').innerHTML = `
 
   <section id="ttrpgs" class="games-section">
     <div class="container">
-      <h2 class="section-title">ENTER THE BASTION</h2>
-      <p class="section-subtitle">Mythic Bastionland and other tabletop adventures, played online.</p>
+      <h2 class="section-title">JOIN A GAME</h2>
+      <p class="section-subtitle">Now playing online: Shadowdark and Mythic Bastionland</p>
       <div class="games-grid">
         ${games.map(renderGameCard).join('')}
       </div>
