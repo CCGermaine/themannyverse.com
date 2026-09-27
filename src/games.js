@@ -2,6 +2,11 @@
 // Snapshot as of 2026-09-27. Prices in USD.
 // Links go directly to StartPlaying for real-time seat/booking status.
 // Promoted from: Obsidian Vault → themannyverse.com/TTRPG Games Data.md
+//
+// Cover images:
+// - Mythic Bastionland: mythic-bastionland.webp (static, 960x540, 16:9)
+// - Shadowdark: shadowdark-generic.webm (animated reveal, 960x540, 16:9)
+//   Both Shadowdark games share the same generic animated cover.
 
 export const games = [
   {
@@ -15,9 +20,13 @@ export const games = [
     seatsFilled: 5,
     seatsTotal: 5,
     status: 'full',
+    statusLabel: 'FULL',
     price: '$20',
     nextSession: 'Oct 4 / Session 37',
     url: 'https://startplaying.games/adventure/cmhszv63c00lcjr04wq58qqdz',
+    coverImage: '/art/covers/shadowdark-generic.webm',
+    coverType: 'video',
+    ctaText: 'Join',
   },
   {
     id: 'western-reaches',
@@ -30,9 +39,13 @@ export const games = [
     seatsFilled: 5,
     seatsTotal: 5,
     status: 'full',
+    statusLabel: 'FULL',
     price: '$20',
     nextSession: 'Sep 30 / Session 22',
     url: 'https://startplaying.games/adventure/cmo833juj000wjs04b1ysf4c4',
+    coverImage: '/art/covers/shadowdark-generic.webm',
+    coverType: 'video',
+    ctaText: 'Join',
   },
   {
     id: 'mythic-thursday',
@@ -44,10 +57,14 @@ export const games = [
     sessionDuration: '3\u20133.5 hours',
     seatsFilled: 3,
     seatsTotal: 4,
-    status: '1 seat left',
+    status: 'available',
+    statusLabel: '1 SEAT LEFT',
     price: '$15',
     nextSession: 'Oct 2 / Session 0',
     url: 'https://startplaying.games/adventure/cmuii5bfx0087jv04trzf80j8',
+    coverImage: '/art/covers/mythic-bastionland.webp',
+    coverType: 'image',
+    ctaText: 'Join',
   },
   {
     id: 'mythic-friday',
@@ -59,10 +76,14 @@ export const games = [
     sessionDuration: '3\u20133.5 hours',
     seatsFilled: 1,
     seatsTotal: 4,
-    status: 'pending (2 needed to start)',
+    status: 'pending',
+    statusLabel: '2 NEEDED TO START',
     price: '$15',
     nextSession: 'Oct 2 / Session 0',
     url: 'https://startplaying.games/adventure/cmuii6bsh00g0l504h1t44iqg',
+    coverImage: '/art/covers/mythic-bastionland.webp',
+    coverType: 'image',
+    ctaText: 'Join',
   },
 ]
 
