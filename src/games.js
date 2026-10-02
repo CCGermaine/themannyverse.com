@@ -56,7 +56,7 @@ export const games = [
     seatsFilled: 4,
     seatsTotal: 4,
     status: 'full',
-    statusLabel: 'FULL - ALL SEATS TAKEN',
+    statusLabel: 'FULL',
     price: '$15',
     url: 'https://startplaying.games/adventure/cmuii5bfx0087jv04trzf80j8',
     coverImage: '/art/covers/mythic-bastionland.webp',
