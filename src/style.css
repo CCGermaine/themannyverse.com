@@ -1,313 +1,154 @@
-/* themannyverse.com — Base styles */
+@font-face {
+  font-family: "Protest Guerrilla";
+  src: url("/fonts/protest-guerrilla-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #11111a;
-  --text-primary: #f0eefe;
-  --text-secondary: #b0acbd;
-  --accent: #c9a7f4;
-  --accent-hover: #d9c0f0;
-  --border: #2a2a3a;
-  --max-width: 1200px;
-  --transition: all 0.3s cubic-bezier(0.25, 0.4, 0.25, 1);
+  --bg: #0c0c0c;
+  --text: #f4f1ea;
+  --dim: #a39e93;
+  --accent: #e6ff32;
+  --column: 40rem;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
+  color-scheme: dark;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
+  margin: 0;
   min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.45;
 }
 
-/* Layout */
-.site {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
-  width: min(90%, var(--max-width));
-  margin-inline: auto;
-  padding: 4rem 0;
-}
-
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 6rem 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 15, 1) 0%,
-    rgba(17, 17, 26, 0.8) 100%
-  );
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(165deg, rgba(10, 10, 15, 0.2) 0%, rgba(17, 17, 26, 0.2) 100%);
-  z-index: 0;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 30%,
-    rgba(10, 10, 15, 0.95) 80%
-  );
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 30px rgba(201, 167, 244, 0.3);
-}
-
-.hero p {
-  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-  color: var(--text-secondary);
-  margin-bottom: 2.5rem;
-  max-width: 600px;
-  margin-inline: auto;
-}
-
-.hero-tagline {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 1rem 2.5rem;
+::selection {
   background: var(--accent);
-  color: #0a0a0f;
-  text-decoration: none;
-  border-radius: 8px;
+  color: #111;
+}
+
+.index {
+  max-width: calc(var(--column) + 12rem);
+  padding: clamp(3.25rem, 11vh, 6.5rem) clamp(1.25rem, 6vw, 6rem) 4.5rem;
+}
+
+h1 {
+  margin: 0;
+  color: var(--accent);
+  font-family: "Protest Guerrilla", ui-serif, Georgia, serif;
+  font-size: clamp(4.25rem, 12vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: 0.01em;
+}
+
+.lede {
+  max-width: 22rem;
+  margin: 1.25rem 0 0;
+}
+
+h2 {
+  margin: 3.25rem 0 1.15rem;
+  color: var(--dim);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72rem;
   font-weight: 600;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(201, 167, 244, 0.3);
-}
-
-.cta-button:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(201, 167, 244, 0.4);
-}
-
-/* Games Section */
-.games-section {
-  padding: 6rem 0;
-  background-color: var(--bg-secondary);
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  text-align: center;
-  margin-bottom: 4rem;
-  max-width: 600px;
-  margin-inline: auto;
-}
-
-.games-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-}
-
-.game-card {
-  display: block;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.game-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 8px 40px rgba(201, 167, 244, 0.15);
-}
-
-.game-cover-wrapper {
-  position: relative;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: #000;
-}
-
-.game-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.game-status {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
-.status-full {
-  background: rgba(255, 255, 255, 0.1);
-  color: #b0acbd;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.status-available {
-  background: rgba(34, 197, 168, 0.15);
-  color: #22c5bd;
-  border: 1px solid rgba(34, 197, 168, 0.3);
-}
-
-.status-pending {
-  background: rgba(245, 158, 11, 0.15);
-  color: #f59e0b;
-  border: 1px solid rgba(245, 158, 11, 0.3);
-}
-
-.game-content {
-  padding: 1.5rem;
-}
-
-.game-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-  letter-spacing: -0.01em;
-}
-
-.game-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.game-description {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.25rem;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.game-details {
-  display: grid;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.game-detail {
+.rows {
   display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.later {
+  margin-top: 2.75rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   justify-content: space-between;
-  gap: 1rem;
+  column-gap: 1.5rem;
+  row-gap: 0.15rem;
+  color: inherit;
+  text-decoration: none;
 }
 
-.detail-label {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-secondary);
+.row-title {
+  font-size: 1.2rem;
 }
 
-.detail-value {
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-align: right;
-}
-
-.game-price .detail-value {
+a.row:hover .row-title,
+a.row:focus-visible .row-title {
   color: var(--accent);
 }
 
-.game-cta {
-  width: 100%;
-  padding: 0.75rem;
-  background: var(--accent);
-  color: #0a0a0f;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: var(--transition);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+.row-meta {
+  margin-left: auto;
+  color: var(--dim);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.92rem;
 }
 
-.game-cta:hover {
-  background: var(--accent-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(201, 167, 244, 0.3);
+.status.is-open {
+  color: var(--accent);
 }
 
-/* Utility */
-.text-center { text-align: center; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-8 { margin-top: 2rem; }
+.elsewhere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.35rem;
+  margin-top: 3.5rem;
+}
+
+.elsewhere a {
+  color: var(--dim);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.elsewhere a:hover,
+.elsewhere a:focus-visible {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.mark {
+  margin: 1.35rem 0 0;
+  color: var(--dim);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .row-meta {
+    margin-left: 0;
+  }
+}
