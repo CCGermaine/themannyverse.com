@@ -17,7 +17,7 @@ export const games = [
     name: 'A Pound of Flesh',
     system: 'Mothership',
     day: 'Wed',
-    price: '$20',
+    price: '$15',
     status: 'Full',
     open: false,
     url: 'https://startplaying.games/adventure/cmo833juj000wjs04b1ysf4c4',
