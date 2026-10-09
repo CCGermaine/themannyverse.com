@@ -20,7 +20,7 @@ export const games = [
     price: '$15',
     status: 'Full',
     open: false,
-    url: 'https://startplaying.games/adventure/cmo833juj000wjs04b1ysf4c4',
+    url: 'https://startplaying.games/adventure/cmux9kldg008ykz04vo693c2v',
   },
   {
     id: 'mythic-thursday',
