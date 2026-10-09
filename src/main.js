@@ -1,5 +1,6 @@
 import './style.css'
 import { games } from './games'
+import { startLabel } from './when'
 
 const list = document.querySelector('#games')
 
@@ -12,7 +13,7 @@ function text(value) {
 }
 
 function facts(game) {
-  return [game.system, game.day, game.price].filter(Boolean).map(text).join(' · ')
+  return [game.system, startLabel(game.start), game.price].filter(Boolean).map(text).join(' · ')
 }
 
 list.innerHTML = games

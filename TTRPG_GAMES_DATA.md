@@ -2,18 +2,18 @@
 
 `src/games.js` is the Play list. This file and the Obsidian note `TTRPG Games Data` should match it. StartPlaying holds the long copy, the live seats, and booking.
 
-The homepage prints a name and one facts line: system (when the title is not already the system), weekday, price, and a status word. The weekday stands in for a session date, so the page does not need a weekly date edit. An open seat is the status word in yellow. A full table stays grey.
+The homepage prints a name and one facts line: system (when the title is not already the system), the visitor's local day and time, price, and a status word. Each game stores an 8:00 start in `Asia/Kuala_Lumpur`. The browser converts that weekly time, including the US clock change. An open seat is the status word in yellow. A full table stays grey.
 
 ## Listings
 
 Checked against `src/games.js` on 2026-10-09.
 
-| Name | System on the line | Day | Price | Status | StartPlaying |
-|------|--------------------|-----|-------|--------|--------------|
-| Into the Gloaming | Shadowdark | Sun | $20 | Full | https://startplaying.games/adventure/cmhszv63c00lbjr04inzp1wb4?ref=cleydacnf0001mj085hsj86k0 |
-| A Pound of Flesh | Mothership | Wed | $15 | Full | https://startplaying.games/adventure/cmux9kldg008xkz04epoy93o3?ref=cleydacnf0001mj085hsj86k0 |
-| Mythic Bastionland | title is the system | Thu | $15 | Full | https://startplaying.games/adventure/cmuii5bfx0086jv041itiapt4?ref=cleydacnf0001mj085hsj86k0 |
-| Mythic Bastionland | title is the system | Fri | $15 | 2 to start | https://startplaying.games/adventure/cmuii6bsh00fzl504ak9smaip?ref=cleydacnf0001mj085hsj86k0 |
+| Name | System on the line | Malaysia start | Price | Status | StartPlaying |
+|------|--------------------|----------------|-------|--------|--------------|
+| Into the Gloaming | Shadowdark | Sun 8:00 | $20 | Full | https://startplaying.games/adventure/cmhszv63c00lbjr04inzp1wb4?ref=cleydacnf0001mj085hsj86k0 |
+| A Pound of Flesh | Mothership | Wed 8:00 | $15 | Full | https://startplaying.games/adventure/cmux9kldg008xkz04epoy93o3?ref=cleydacnf0001mj085hsj86k0 |
+| Mythic Bastionland | title is the system | Fri 8:00 | $15 | Full | https://startplaying.games/adventure/cmuii5bfx0086jv041itiapt4?ref=cleydacnf0001mj085hsj86k0 |
+| Mythic Bastionland | title is the system | Sat 8:00 | $15 | 2 to start | https://startplaying.games/adventure/cmuii6bsh00fzl504ak9smaip?ref=cleydacnf0001mj085hsj86k0 |
 
 On 2026-10-05 the Wednesday slot was renamed A Pound of Flesh while it still used the Into the Western Reaches listing. On 2026-10-09 all four rows use the StartPlaying links in the table above. Sunday stayed Into the Gloaming.
 
@@ -22,7 +22,7 @@ On 2026-10-05 the Wednesday slot was renamed A Pound of Flesh while it still use
 - `id` — internal key
 - `name` — the link text
 - `system` — omitted on the page when `null` (both Mythic Bastionland rows)
-- `day` — `Sun`, `Wed`, `Thu`, or `Fri`
+- `start` — weekly time in `Asia/Kuala_Lumpur`: weekday, hour, minute. The page shows the visitor's day and time. The two Mythic rows are Friday and Saturday morning in Malaysia, which is Thursday and Friday evening in New York before the US clock change.
 - `price` — USD, per session
 - `status` — the words on the page
 - `open` — `true` draws the status in yellow

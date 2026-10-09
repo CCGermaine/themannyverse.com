@@ -1,12 +1,15 @@
 // Games on the index. Seat details and booking live on StartPlaying.
-// A status word is the only fact this page keeps. Open tables use `open`.
+// A status word is the only seat fact this page keeps. Open tables use `open`.
+// `start` is the weekly table time in Malaysia. The page prints it in the visitor's zone.
+
+const malaysia = { timeZone: 'Asia/Kuala_Lumpur', hour: 8, minute: 0 }
 
 export const games = [
   {
     id: 'gloaming',
     name: 'Into the Gloaming',
     system: 'Shadowdark',
-    day: 'Sun',
+    start: { ...malaysia, weekday: 'Sun' },
     price: '$20',
     status: 'Full',
     open: false,
@@ -16,7 +19,7 @@ export const games = [
     id: 'pound-of-flesh',
     name: 'A Pound of Flesh',
     system: 'Mothership',
-    day: 'Wed',
+    start: { ...malaysia, weekday: 'Wed' },
     price: '$15',
     status: 'Full',
     open: false,
@@ -26,7 +29,7 @@ export const games = [
     id: 'mythic-thursday',
     name: 'Mythic Bastionland',
     system: null,
-    day: 'Thu',
+    start: { ...malaysia, weekday: 'Fri' },
     price: '$15',
     status: 'Full',
     open: false,
@@ -36,7 +39,7 @@ export const games = [
     id: 'mythic-friday',
     name: 'Mythic Bastionland',
     system: null,
-    day: 'Fri',
+    start: { ...malaysia, weekday: 'Sat' },
     price: '$15',
     status: '2 to start',
     open: true,
