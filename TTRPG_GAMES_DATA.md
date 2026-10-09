@@ -6,16 +6,16 @@ The homepage prints a name and one facts line: system (when the title is not alr
 
 ## Listings
 
-Checked against `src/games.js` on 2026-10-08.
+Checked against `src/games.js` on 2026-10-09.
 
 | Name | System on the line | Day | Price | Status | StartPlaying |
 |------|--------------------|-----|-------|--------|--------------|
-| Into the Gloaming | Shadowdark | Sun | $20 | Full | https://startplaying.games/adventure/cmhszv63c00lcjr04wq58qqdz |
-| A Pound of Flesh | Mothership | Wed | $15 | Full | https://startplaying.games/adventure/cmux9kldg008ykz04vo693c2v |
-| Mythic Bastionland | title is the system | Thu | $15 | Full | https://startplaying.games/adventure/cmuii5bfx0087jv04trzf80j8 |
-| Mythic Bastionland | title is the system | Fri | $15 | 2 to start | https://startplaying.games/adventure/cmuii6bsh00g0l504h1t44iqg |
+| Into the Gloaming | Shadowdark | Sun | $20 | Full | https://startplaying.games/adventure/cmhszv63c00lbjr04inzp1wb4?ref=cleydacnf0001mj085hsj86k0 |
+| A Pound of Flesh | Mothership | Wed | $15 | Full | https://startplaying.games/adventure/cmux9kldg008xkz04epoy93o3?ref=cleydacnf0001mj085hsj86k0 |
+| Mythic Bastionland | title is the system | Thu | $15 | Full | https://startplaying.games/adventure/cmuii5bfx0086jv041itiapt4?ref=cleydacnf0001mj085hsj86k0 |
+| Mythic Bastionland | title is the system | Fri | $15 | 2 to start | https://startplaying.games/adventure/cmuii6bsh00fzl504ak9smaip?ref=cleydacnf0001mj085hsj86k0 |
 
-On 2026-10-05 the Wednesday slot was renamed A Pound of Flesh while it still used the Into the Western Reaches listing. On 2026-10-08 the link moved to the Mothership listing `cmux9kldg008ykz04vo693c2v`. Sunday stayed Into the Gloaming.
+On 2026-10-05 the Wednesday slot was renamed A Pound of Flesh while it still used the Into the Western Reaches listing. On 2026-10-09 all four rows use the StartPlaying links in the table above. Sunday stayed Into the Gloaming.
 
 ## Fields in `src/games.js`
 

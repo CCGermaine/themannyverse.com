@@ -10,7 +10,7 @@ export const games = [
     price: '$20',
     status: 'Full',
     open: false,
-    url: 'https://startplaying.games/adventure/cmhszv63c00lcjr04wq58qqdz',
+    url: 'https://startplaying.games/adventure/cmhszv63c00lbjr04inzp1wb4?ref=cleydacnf0001mj085hsj86k0',
   },
   {
     id: 'pound-of-flesh',
@@ -20,7 +20,7 @@ export const games = [
     price: '$15',
     status: 'Full',
     open: false,
-    url: 'https://startplaying.games/adventure/cmux9kldg008ykz04vo693c2v',
+    url: 'https://startplaying.games/adventure/cmux9kldg008xkz04epoy93o3?ref=cleydacnf0001mj085hsj86k0',
   },
   {
     id: 'mythic-thursday',
@@ -30,7 +30,7 @@ export const games = [
     price: '$15',
     status: 'Full',
     open: false,
-    url: 'https://startplaying.games/adventure/cmuii5bfx0087jv04trzf80j8',
+    url: 'https://startplaying.games/adventure/cmuii5bfx0086jv041itiapt4?ref=cleydacnf0001mj085hsj86k0',
   },
   {
     id: 'mythic-friday',
@@ -40,6 +40,6 @@ export const games = [
     price: '$15',
     status: '2 to start',
     open: true,
-    url: 'https://startplaying.games/adventure/cmuii6bsh00g0l504h1t44iqg',
+    url: 'https://startplaying.games/adventure/cmuii6bsh00fzl504ak9smaip?ref=cleydacnf0001mj085hsj86k0',
   },
 ]
