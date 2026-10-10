@@ -25,4 +25,6 @@ A push to `main` runs `.github/workflows/deploy.yml`. The workflow builds `dist/
 - `src/style.css` — layout. Near-black ground, yellow `#e6ff32` for the name and an open seat
 - `public/fonts/` — Protest Guerrilla, used for the name. License is `OFL.txt`
 
-Planning notes live in the Obsidian vault at `themannyverse.com/`. `TTRPG_GAMES_DATA.md` in this repo and the vault note `TTRPG Games Data` should match `src/games.js`.
+- `docs/` — technical docs: deployment, DNS, hosting, stack, site sections, and `games-data.md`, which should match `src/games.js`
+
+Concept, payments, and marketing notes live in the Obsidian vault at `~/Vault/Projects/themannyverse.com.md`.
