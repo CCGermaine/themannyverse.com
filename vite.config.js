@@ -1,16 +1,27 @@
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
+import { prerenderPlugin } from './build/prerender-plugin.js'
 
-// https://vite.dev/config/
-export default defineConfig(({ command }) => ({
-  // When building for production, serve from the root of themannyverse.com
-  // When running locally, also serve from root
+const root = dirname(fileURLToPath(import.meta.url))
+
+export default defineConfig({
   base: '/',
+  plugins: [prerenderPlugin()],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    rolldownOptions: {
+      input: [
+        resolve(root, 'index.html'),
+        resolve(root, 'games/index.html'),
+        resolve(root, 'art-zines/index.html'),
+        resolve(root, '404.html'),
+      ],
+    },
   },
   server: {
     port: 5173,
     strictPort: true,
   },
-}))
+})
