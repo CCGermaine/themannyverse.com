@@ -1,0 +1,149 @@
+{
+  "wordmark": "The Mannyverse",
+  "person": "GM Manny",
+  "skip_link": "[LOREM — copy slot: skip link]",
+  "meta": {
+    "title": "The Mannyverse · Online Tabletop Games with GM Manny",
+    "description": "Weekly online Shadowdark, Mothership, and Mythic Bastionland with GM Manny. Strange mysteries, hand-drawn maps, and a community to come home to.",
+    "og_image": "/og/og-1200x630.png",
+    "og_image_alt": "Colored-pencil, ink-hatched portrait of Dolg, a pale green-blue humanoid with a tall rust-orange conical cap, drooping mossy-green hair, pointed ears, and mismatched eyes, one blue and one violet. Heavy-lidded and unimpressed, he rests his chin on a thick hand inside a black circle outline. Beside him: \"The Mannyverse. Some games feel cozy. Some feel awful in the best way.\""
+  },
+  "analytics": {
+    "goatcounter": ""
+  },
+  "nav": {
+    "games": "Games",
+    "art": "Art & Zines",
+    "discord": "Discord"
+  },
+  "hero": {
+    "headline": "Some games feel cozy. Some feel awful in the best way.",
+    "subhead": "Online tabletop games, hand-drawn maps and monsters, and zines from GM Manny and the Gold & Glory crew.",
+    "cta": "Grab a seat",
+    "cta_one": "Grab a seat in {name}",
+    "cta_all_full": "Get the next open seat",
+    "cta_secondary": "Join Gold & Glory"
+  },
+  "proof": "490+ games on StartPlaying · 5 stars",
+  "open_now": {
+    "title": "Open seats",
+    "intro": "Grab a seat at the table and see if you can ...",
+    "more": "See every table",
+    "all_full_title": "Every table's full. For now.",
+    "all_full_line": "New seats get posted in #open-seats on our Discord. Hop in, say hoy, and you'll see the next one.",
+    "all_full_cta": "Watch #open-seats"
+  },
+  "status": {
+    "open": "{count} seats open",
+    "starting": "{count} more {who} to start",
+    "full": "Table full",
+    "starting_line": "You could be the one who gets it rolling.",
+    "book": "Grab a seat",
+    "book_hint": "Opens StartPlaying",
+    "book_line": "Booked and paid through StartPlaying. New to StartPlaying? This link takes $10 off your first game.",
+    "full_cta": "Get the next open seat",
+    "full_secondary": "Watch this table"
+  },
+  "stat_labels": {
+    "system": "[LOREM — copy slot: stat label: system]",
+    "when": "[LOREM — copy slot: stat label: when]",
+    "price": "[LOREM — copy slot: stat label: price]"
+  },
+  "gold_glory": {
+    "title": "Gold & Glory",
+    "label": "Come for the game. Stay for the people.",
+    "pitch": [
+      "Gold & Glory is where the game keeps going after the session ends: a friendly, inclusive crew of players and GMs from all over the world.",
+      "Make friends at other tables in weekly $5 one-shots, find your next campaign, and join the board game nights, streams, and watch parties.",
+      "400+ members, and there's always room for one more."
+    ],
+    "cta": "Join Gold & Glory"
+  },
+  "art_teaser": {
+    "title": "Art & Zines",
+    "line": "Made by hand. Maps, monsters, and weird little adventures you can hold.",
+    "cta": "See the art & zines",
+    "cta_secondary": "Get a zine"
+  },
+  "games_page": {
+    "title": "The Tables",
+    "intro": "Weekly online games, story first, with times shown in your time zone. New players are always welcome. We'll roll up characters together and I'll teach as we go.",
+    "session": {
+      "heading": "[LOREM — copy slot: session strip heading]",
+      "line": "Every week we gather in Discord voice, play on Owlbear Rodeo, and tell a story for about three hours.",
+      "steps": [
+        {
+          "title": "Book it.",
+          "text": "Grab a seat on StartPlaying."
+        },
+        {
+          "title": "Show up.",
+          "text": "Audio on Discord, maps and tokens on Owlbear Rodeo. Just a browser and a mic."
+        },
+        {
+          "title": "Play.",
+          "text": "We make characters together at session zero. Never played? Perfect."
+        }
+      ],
+      "cta": "Find your table"
+    },
+    "bottom": {
+      "line": "Nothing fits your week? New tables and open seats get posted in #open-seats.",
+      "cta": "Get the next open seat"
+    }
+  },
+  "art_page": {
+    "title": "Art & Zines",
+    "intro": "Everything here is drawn by hand for the table: maps, tokens, portraits, and the odd weird little zine. No AI, ever.",
+    "zines": {
+      "title": "Tales from the Mannyverse",
+      "line": "Pay-what-you-want Shadowdark zines, made with love and a lot of ink.",
+      "card_cta": "Name your price on itch.io",
+      "store_cta": "See all zines on itch.io"
+    },
+    "gallery": {
+      "heading": "[LOREM — copy slot: gallery heading]",
+      "line": "Drawn for the table. Every map, token, and portrait here started on paper for a game I ran.",
+      "commissions_line": "Want something drawn for your table? Commissions are open. Ask me on Discord and we'll talk shop.",
+      "commissions_cta": "Ask about a commission",
+      "instagram_cta": "Follow the art on Instagram",
+      "play_cta": "Play in the worlds I draw"
+    },
+    "dice": {
+      "title": "Mythic Dice",
+      "line": "A free Owlbear Rodeo extension I built for Mythic Bastionland tables, open source on GitHub.",
+      "cta": "Get Mythic Dice",
+      "secondary": "Talk shop on Discord"
+    }
+  },
+  "theme_toggle": "[LOREM — copy slot: theme toggle]",
+  "support": {
+    "label": "Support",
+    "title": "Keep the Dice Rolling",
+    "line": "Tipping the GM, paying for a custom session, or settling up for an art commission? Any of these three links works for all of it. Pick whichever's easiest for you.",
+    "small": "Weekly games are booked and paid on StartPlaying."
+  },
+  "footer": {
+    "microcopy": "So pull up a virtual chair and let's tell some stories together.",
+    "mark": "The Mannyverse · Made by hand in Malaysia"
+  },
+  "not_found": {
+    "headline": "You've wandered off the map.",
+    "line": "Whatever was here, something ate it. No known method of recovery has been discovered, yet.",
+    "cta": "Back to the table"
+  },
+  "images": {
+    "hero": {
+      "file": "hollow-king",
+      "alt": "[LOREM — copy slot: alt: hero, Hollow King head]"
+    },
+    "open_now": {
+      "file": "open-door-temple",
+      "alt": "[LOREM — copy slot: alt: Order of the Open Door temple]"
+    },
+    "gold_glory_banner": {
+      "file": "gg-banner",
+      "alt": "[LOREM — copy slot: alt: Gold & Glory banner (say the words on it)]"
+    }
+  }
+}

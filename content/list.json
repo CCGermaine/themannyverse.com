@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "type": "game",
+      "id": "gloaming",
+      "name": "Into the Gloaming",
+      "system": "Shadowdark",
+      "tag": "Shadowdark | Dark & Gritty Adventure",
+      "hook": "Bandits, thieves, beasts, trolls, and evil spirits roam these lawless lands. No one's coming to save you—don't go alone.",
+      "credit": "Shadowdark RPG by The Arcane Library.",
+      "weekday": "Sun",
+      "time": "08:00",
+      "price": "$20",
+      "state": "full",
+      "count": null,
+      "link": "https://startplaying.games/adventure/cmhszv63c00lbjr04inzp1wb4?ref=cleydacnf0001mj085hsj86k0"
+    },
+    {
+      "type": "game",
+      "id": "pound-of-flesh",
+      "name": "A Pound of Flesh",
+      "system": "Mothership",
+      "tag": "Mothership | Sci-Fi Campaign",
+      "hook": "Shore leave on an outlaw station that loves you back… until it doesn't.",
+      "credit": "",
+      "weekday": "Wed",
+      "time": "08:00",
+      "price": "$15",
+      "state": "full",
+      "count": null,
+      "link": "https://startplaying.games/adventure/cmux9kldg008xkz04epoy93o3?ref=cleydacnf0001mj085hsj86k0"
+    },
+    {
+      "type": "game",
+      "id": "mythic-thursday",
+      "name": "Mythic Bastionland",
+      "system": "Mythic Bastionland",
+      "tag": "Mythic Bastionland | Knights, Myths & Seers",
+      "hook": "The realm is old, the Myths are older, and the seers never tell you everything.",
+      "credit": "Mythic Bastionland by Chris McDowall.",
+      "weekday": "Fri",
+      "time": "08:00",
+      "price": "$15",
+      "state": "full",
+      "count": null,
+      "link": "https://startplaying.games/adventure/cmuii5bfx0086jv041itiapt4?ref=cleydacnf0001mj085hsj86k0"
+    },
+    {
+      "type": "game",
+      "id": "mythic-friday",
+      "name": "Mythic Bastionland",
+      "system": "Mythic Bastionland",
+      "tag": "Mythic Bastionland | New Company Forming",
+      "hook": "You're a Knight. Not a murder-hobo. A Knight, with an oath to keep, a seer in your ear, and a Myth waiting for you out there.",
+      "credit": "Mythic Bastionland by Chris McDowall.",
+      "weekday": "Sat",
+      "time": "08:00",
+      "price": "$15",
+      "state": "starting",
+      "count": 2,
+      "who": "Knights",
+      "link": "https://startplaying.games/adventure/cmuii6bsh00fzl504ak9smaip?ref=cleydacnf0001mj085hsj86k0"
+    },
+    {
+      "type": "zine",
+      "id": "while-you-sleep",
+      "name": "While You Sleep",
+      "system": "Shadowdark",
+      "hook": "Dreamwalk into a friend's nightmares and face their fears together. 16 printer-friendly pages, hand drawn and inked on paper, born in the Gold & Glory community.",
+      "credit": "",
+      "cover": "while-you-sleep-cover",
+      "cover_alt": "[LOREM — copy slot: alt: While You Sleep cover]",
+      "link": "https://gm-manny.itch.io/while-you-sleep",
+      "newest": false
+    },
+    {
+      "type": "zine",
+      "id": "fiddler-in-the-bush",
+      "name": "Fiddler In The Bush",
+      "system": "Shadowdark",
+      "hook": "A lusty satyr, a stolen queen, and a lost kingdom swallowed by a twisted forest. Yes, there's an actual fiddle, and yes, it's magical.",
+      "credit": "Made for the Weird Tales Shadowdark Game Jam 2024.",
+      "cover": "fiddler-in-the-bush-cover",
+      "cover_alt": "[LOREM — copy slot: alt: Fiddler In The Bush cover]",
+      "link": "https://gm-manny.itch.io/fiddler-in-the-bush",
+      "newest": true
+    },
+    {
+      "type": "art",
+      "id": "haiyum-head",
+      "image": "haiyum-head",
+      "caption": "[LOREM — copy slot: caption: haiyum-head ([Piece name] · [what it was for])]",
+      "alt": "[LOREM — copy slot: alt: haiyum-head]",
+      "home": true
+    },
+    {
+      "type": "art",
+      "id": "three-eyed-diva",
+      "image": "three-eyed-diva",
+      "caption": "[LOREM — copy slot: caption: three-eyed-diva ([Piece name] · [what it was for])]",
+      "alt": "[LOREM — copy slot: alt: three-eyed-diva]",
+      "home": true
+    },
+    {
+      "type": "art",
+      "id": "lizardman-warrior",
+      "image": "lizardman-warrior",
+      "caption": "[LOREM — copy slot: caption: lizardman-warrior ([Piece name] · [what it was for])]",
+      "alt": "[LOREM — copy slot: alt: lizardman-warrior]",
+      "home": true
+    }
+  ]
+}
