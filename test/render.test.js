@@ -191,6 +191,21 @@ test('A14 meta and JSON-LD', () => {
   assert.doesNotMatch(renderFooter(model), /<script[^>]*goatcounter/)
 })
 
+test('art page uses the section 9 image sizes', () => {
+  const model = realModel()
+  const art = renderArt(model)
+  const home = renderHome(model)
+  assert.match(art, /while-you-sleep[^>]*sizes="\(max-width:720px\) 45vw, 16rem"/)
+  assert.match(art, /haiyum-head[^>]*sizes="\(max-width:720px\) 45vw, 16rem"/)
+  assert.match(home, /while-you-sleep[^>]*sizes="\(max-width:760px\) 45vw, 13rem"/)
+  assert.match(home, /haiyum-head[^>]*sizes="\(max-width:720px\) 30vw, 11rem"/)
+  assert.match(art, /class="thumbs"/)
+  assert.match(art, /href="\/games\/"/)
+  assert.match(art, /data-goatcounter-click="mythic-dice"/)
+  assert.match(art, /data-goatcounter-click="instagram:gallery"/)
+  assert.match(art, /data-goatcounter-click="itch:store"/)
+})
+
 test('visible game facts, zines, and footer links are in the HTML', () => {
   const model = realModel()
   const games = renderGames(model)

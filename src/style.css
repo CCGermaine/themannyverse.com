@@ -438,6 +438,9 @@ h1 { font-size: clamp(2.5rem, 6.4vw, 4.6rem); }
   gap: .75rem;
   align-items: stretch;
 }
+.gallery .thumbs {
+  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr));
+}
 .thumbs li { display: flex; min-width: 0; }
 .thumbs .pic {
   flex: 1;
