@@ -4,7 +4,7 @@ import { dirname, join } from 'node:path'
 import { test } from 'node:test'
 import { fileURLToPath } from 'node:url'
 import { loadContent } from '../build/content.js'
-import { mytLabel, renderArt, renderFooter, renderGames, renderHead, renderHeader, renderHome } from '../build/render.js'
+import { mytLabel, renderArt, renderFooter, renderGames, renderHead, renderHeader, renderHome, renderNotFound } from '../build/render.js'
 import { webpSize } from '../build/webp-size.js'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -189,6 +189,72 @@ test('A14 meta and JSON-LD', () => {
   assert.equal(data['@graph'][1].description, 'Professional GM, Artist, Nerd, Hubby.')
   assert.ok(data['@graph'][1].sameAs.includes(INVITE))
   assert.doesNotMatch(renderFooter(model), /<script[^>]*goatcounter/)
+})
+
+test('A15 GoatCounter script and click attributes', () => {
+  const pages = [
+    ['home', renderHome],
+    ['games', renderGames],
+    ['art', renderArt],
+    ['404', renderNotFound],
+  ]
+  const empty = realModel()
+  assert.equal(empty.site.analytics.goatcounter, '')
+  for (const [name, renderMain] of pages) {
+    const html = renderHeader(name === 'art' ? 'art' : name === 'games' ? 'games' : name === '404' ? '404' : 'home', empty) + renderMain(empty) + renderFooter(empty)
+    assert.equal((html.match(/<script\b/g) || []).length, 0, `${name} emits a script when the code is empty`)
+  }
+
+  const set = realModel()
+  set.site = structuredClone(set.site)
+  set.site.analytics = { goatcounter: 'themannyverse' }
+  const script = '<script data-goatcounter="https://themannyverse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+  const rendered = []
+  for (const [name, renderMain] of pages) {
+    const pageName = name === 'art' ? 'art' : name === '404' ? '404' : name === 'games' ? 'games' : 'home'
+    const html = renderHeader(pageName, set) + renderMain(set) + renderFooter(set)
+    assert.equal((html.match(/<script\b/g) || []).length, 1, `${name} script count`)
+    assert.equal((html.match(/data-goatcounter="/g) || []).length, 1, `${name} count script`)
+    assert.ok(html.includes(script), `${name} script tag`)
+    rendered.push(html)
+  }
+
+  const allFull = withStates(['full', 'full', 'full', 'full'])
+  allFull.site = structuredClone(allFull.site)
+  allFull.site.analytics = { goatcounter: 'themannyverse' }
+  rendered.push(renderHome(allFull) + renderGames(allFull))
+
+  const clicks = new Set()
+  for (const html of rendered) {
+    for (const match of html.matchAll(/data-goatcounter-click="([^"]*)"/g)) clicks.add(match[1])
+  }
+  const expected = [
+    'book:mythic-friday',
+    'book:gloaming',
+    'book:pound-of-flesh',
+    'book:mythic-thursday',
+    'seats-alert:gloaming',
+    'seats-alert:pound-of-flesh',
+    'seats-alert:mythic-thursday',
+    'seats-alert:mythic-friday',
+    'seats-alert:games-bottom',
+    'seats-alert:all-full',
+    'discord:nav',
+    'discord:hero',
+    'discord:gold-glory',
+    'discord:footer',
+    'discord:commissions',
+    'itch:while-you-sleep',
+    'itch:fiddler-in-the-bush',
+    'itch:store',
+    'mythic-dice',
+    'instagram:gallery',
+    'instagram:footer',
+    'support:stripe',
+    'support:paypal',
+    'support:wise',
+  ]
+  assert.deepEqual([...clicks].sort(), [...expected].sort())
 })
 
 test('art page uses the section 9 image sizes', () => {
