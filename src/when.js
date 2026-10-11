@@ -59,17 +59,18 @@ export function nextStart(start, now = new Date()) {
   throw new Error(`No upcoming ${start.weekday} ${start.hour}:${start.minute} in ${start.timeZone}`)
 }
 
-export function localLabel(instant, timeZone) {
+export function localLabel(instant, timeZone, options = {}) {
   const zone = timeZone ? { timeZone } : {}
   const day = new Intl.DateTimeFormat('en-US', { ...zone, weekday: 'short' }).format(instant)
   const time = new Intl.DateTimeFormat('en-US', {
     ...zone,
     hour: 'numeric',
     minute: '2-digit',
+    ...(options.zoneName ? { timeZoneName: 'short' } : {}),
   }).format(instant)
   return `${day} · ${time}`
 }
 
-export function startLabel(start, now = new Date(), timeZone) {
-  return localLabel(nextStart(start, now), timeZone)
+export function startLabel(start, now = new Date(), timeZone, options) {
+  return localLabel(nextStart(start, now), timeZone, options)
 }
