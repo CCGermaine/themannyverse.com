@@ -1,68 +1,55 @@
 # themannyverse.com — Sections
 
-## Live page (2026-10-08)
+Four pages, prerendered from `content/`. One h1 on each page. Dark mode follows the operating system. The header control can pin light or dark, and that choice is kept in the browser. With JavaScript off, the system setting alone decides, and the control is not shown.
 
-One column, left aligned. The empty space to the right is the layout. On a phone each row stacks.
+In dark mode the wordmark and title bars are paper with ink text. Artwork sits on a paper card and is not inverted. Pieces that were drawn on a white ground also use multiply, so the white melts into the paper. The Gold & Glory banner stays on black.
 
-```text
-Manny
-Professional GM, Artist, Nerd, Hubby.
+## Every page
 
-Play
-  Into the Gloaming          Shadowdark · <local day and time> · $20 · Full
-  A Pound of Flesh           Mothership · <local day and time> · $15 · Full
-  Mythic Bastionland         <local day and time> · $15 · Full
-  Mythic Bastionland         <local day and time> · $15 · 2 to start
+- Skip link, then the wordmark to `/`.
+- Nav: Games `/games/`, Art & Zines `/art-zines/`, Discord. The current page is marked.
+- Theme control, last in that row. On a phone it is the icon only.
+- Footer: Support (Stripe, PayPal, Wise as text links, no payment scripts and no QR codes), the microcopy, the social row with Support last, the about line, then the mark.
 
-  Artwork                    pictures, when they're ready
-  Cherating                  a weekend at the table, packages coming soon!
+The about line is `content/about.md`: "Professional GM, Artist, Nerd, Hubby."
 
-Money For Manny
-  Stripe
-  PayPal
-  Wise
+## Home `/`
 
-StartPlaying   Discord   Instagram   X   Facebook   Itch.io   Github
-themannyverse.com
-```
+1. Hero. Headline, subhead, one primary button and one secondary. Proof bar. Hollow King on the right, or under the proof bar on a phone. At 390 pixels, exactly one primary button is above the fold.
+2. Open seats. The bookable tables, or the all-full panel when none are bookable. Then a link to Games.
+3. Gold & Glory. Banner, three short paragraphs, join button.
+4. Art & Zines teaser. Two zine covers and three gallery tiles, then links to the Art page and the newest zine.
+5. Footer, including Support.
 
-- The big word is **Manny**, in Protest Guerrilla, yellow `#e6ff32` on `#0c0c0c`.
-- The about line under the name is the whole about. There is no separate About page.
-- Each game row is one link to that game's StartPlaying page. Hover turns the title yellow. There is no Join button, no blurb, no cover, and no seat fraction.
-- The day and time on a row are the visitor's own. The stored starts are 8:00 in `Asia/Kuala_Lumpur`: Sunday, Wednesday, Friday, and Saturday. In New York, before the US clock change, those read Saturday, Tuesday, Thursday, and Friday at 8:00 PM.
-- **2 to start** is yellow because Friday is open. **Full** stays grey.
-- Artwork and Cherating are the same row shape and are not links. There is nowhere for them to go yet.
-- Footer links, in page order: [StartPlaying](https://startplaying.games/gm/manny), [Discord](https://discord.gg/w74xbPHEC4), [Instagram](https://www.instagram.com/christiangermaine/), [X](https://x.com/ChristianCGer), [Facebook](https://www.facebook.com/GMManny82/), [Itch.io](https://gm-manny.itch.io/), [Github](https://github.com/CCGermaine?tab=repositories). The visible Github label is spelled that way on the page.
-- `themannyverse.com` sits small under the links.
+The primary button depends on how many tables are bookable (`open` or `starting`). One table: grab that seat. Two or more: scroll to Open seats. None: the open-seats Discord.
 
-The earlier hero ("ADVENTURE AWAITS BEYOND THE MAP."), the JOIN A GAME cards, and the purple accent `#c9a7f4` were replaced by this index in repo commit `00faf72`.
+## Games `/games/`
 
-## Money For Manny
+Heading "The Tables" and the intro. Then `#tables`: every game that is not `hidden`, bookable tables first, then full tables, file order inside each group. Each card is the same stat block as Home.
 
-Three text links under Cherating. The heading is the same small style as Play, so it shows as MONEY FOR MANNY. Each name is the whole link. There is no grey fact, button, price, or QR code on the page.
+Then the session strip: three framed steps, and a button that scrolls back to `#tables`.
 
-- [Stripe](https://book.stripe.com/9B600jblT26f3yY9CD4AU00)
-- [PayPal](https://www.paypal.com/ncp/payment/DGEZEC82THVWC)
-- [Wise](https://wise.com/pay/me/christiancharlesg3)
+Then the bottom line. Its button goes to the open-seats Discord, not the general invite.
 
-Weekly seats stay on StartPlaying. The page does not load Stripe or PayPal scripts, and it does not store card data. The embed snippets and QR images in Payments stay off the site.
+## Art & Zines `/art-zines/`
+
+Heading and intro. Zines ("Tales from the Mannyverse"): cover, name linking to itch.io, system, hook, credit, and the card button, then the store button.
+
+Gallery: every `art` item, in a grid that wraps from 14rem tiles. Commissions button to the general Discord, Instagram, and "Play in the worlds I draw" to `/games/`.
+
+Mythic Dice: a framed block, primary button to the extension, text link to the general Discord.
+
+## 404
+
+`404.html` at the site root. GitHub Pages serves it for an unknown path. Headline, one line, "Back to the table" back to `/`. The page is `noindex` and has no canonical URL.
+
+## What this replaces
+
+History: the live page used to be one column of text rows (a name, the games, two placeholder rows, and a payment block). That index is retired. The Art & Zines page is v1, not a later version. Cherating stays hidden: no page and no line. Also out of v1: a page per game, an email list, a calendar, and player accounts.
 
 ## Later
 
-### Version 2
-- Artwork page, then the Artwork row can link to it
-- Cherating page, so the packages line can become a link
-- Individual game pages, only if StartPlaying is no longer enough
-- Newsletter
-- Event calendar
-
-### Version 3
-- Player accounts
-- Character sheets
-- Campaign journals
-- Interactive maps
-- Dice roller
-- TTRPG tools
-- Private campaign areas
-
-Existing TTRPG projects (for example the Owlbear dice extension) could eventually sit in this wider set. They are not part of the page now.
+- Cherating, when there is a package to show
+- A page per game, only if StartPlaying is no longer enough
+- Newsletter and a calendar
+- Accounts, sheets, and campaign tools

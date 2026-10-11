@@ -3,25 +3,25 @@
 Personal site for GM Manny, live at https://themannyverse.com.
 
 ## Stack
-Vite 8, plain JS, no framework. Pages are prerendered from content files. Node 22. Tests use `node --test`.
+Vite 8, plain JS, no framework. Four pages are prerendered from content files: Home, Games, Art & Zines, and a 404. Node 22. Tests use `node --test`.
 
 ## Commands
 - Dev: `npm install && npm run dev` (http://localhost:5173).
 - Check: `npm run check`. Build: `npm run build`. Test: `npm test`.
 
 ## Content
-Content lives in `content/` (list/site/links/about). `npm run check` validates. The build fails on bad content.
+Games, zines and gallery art are edited only in `content/list.json`. Site copy is `content/site.json`. Links are `content/links.json`. The about line is `content/about.md`. `npm run check` validates. The build fails on bad content. See `docs/content.md`.
 
-Visible copy only from Quill's deck. Never invent copy.
+Visible copy comes only from Quill's copy deck. Never invent copy.
 
-Art only from the allowed list. No AI images.
+Only art on the allowed list in `docs/content.md`. Never the forbidden list. No AI images.
 
-Colours only through the tokens in `src/style.css`.
+Colours only through the theme tokens in `src/style.css`. Never a raw hex in component CSS.
+
+Visual reference: `docs/site-sections.md` plus the M4 shots (390 and 1440, light and dark).
 
 ## Git
 Work on a branch. `main` deploys. Push only when the brief says. Never force-push. Never run `gh workflow run`.
 
-No plan mode: write `_handoff/out/PLAN.md` and continue.
-
 ## Verify
-Verify at 390 and 1440 in light and dark (see `_handoff/briefs/COMMON.md` while the redesign runs).
+Build with `ALLOW_LOREM=1 npm run build` until the copy slots are filled. Preview in the background (`npx vite preview --port 4173 --strictPort`). Playwright at 390 and 1440, light and dark, with a 60 second timeout on each action and `timeout 300` around the run. No horizontal scroll. Stop the server.
