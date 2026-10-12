@@ -144,6 +144,8 @@ test('games page orders bookable tables before full ones and hides hidden games'
   const html = renderGames(model)
   assert.deepEqual(cardIds(html), ['mythic-friday', 'gloaming', 'pound-of-flesh', 'mythic-thursday'])
   assert.doesNotMatch(html, /hidden-game/)
+  const heading = html.indexOf('class="tables-label"')
+  assert.ok(heading !== -1 && heading < html.indexOf('<h3'), 'games list heading sits before the card titles')
 })
 
 test('A14 meta and JSON-LD', () => {

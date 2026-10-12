@@ -134,6 +134,7 @@ export function renderGames(model) {
   <p class="line">${vis(site.games_page.intro)}</p>
 </header>
 <div id="tables" class="tables">
+  <h2 class="tables-label" id="tables-h">${vis(site.games_page.title)}</h2>
   ${games.map((game) => renderCard(game, model)).join('\n')}
 </div>
 <section class="session" aria-labelledby="session-h">
