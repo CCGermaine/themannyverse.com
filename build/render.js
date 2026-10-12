@@ -129,8 +129,10 @@ export function renderGames(model) {
   const { site } = model
   const games = orderedGames(model.list.items)
   const session = site.games_page.session
-  return `<h1>${vis(site.games_page.title)}</h1>
-<p class="line">${vis(site.games_page.intro)}</p>
+  return `<header class="page-head">
+  <h1>${vis(site.games_page.title)}</h1>
+  <p class="line">${vis(site.games_page.intro)}</p>
+</header>
 <div id="tables" class="tables">
   ${games.map((game) => renderCard(game, model)).join('\n')}
 </div>
@@ -151,8 +153,10 @@ export function renderArt(model) {
   const page = site.art_page
   const zineItems = list.items.filter((item) => item.type === 'zine')
   const gallery = list.items.filter((item) => item.type === 'art')
-  return `<h1>${vis(page.title)}</h1>
-<p class="line">${vis(page.intro)}</p>
+  return `<header class="page-head">
+  <h1>${vis(page.title)}</h1>
+  <p class="line">${vis(page.intro)}</p>
+</header>
 <section class="zines-section" aria-labelledby="zines-h">
   <h2 class="label" id="zines-h">${vis(page.zines.title)}</h2>
   <p class="line">${vis(page.zines.line)}</p>
@@ -171,12 +175,14 @@ export function renderArt(model) {
   </div>
 </section>
 <section class="dice" aria-labelledby="dice-h">
-  <h2 class="bar" id="dice-h">${vis(page.dice.title)}</h2>
-  <p class="line">${vis(page.dice.line)}</p>
-  <p class="dice-actions">
-    ${anchor({ className: 'btn btn-primary', href: links['mythic-dice'], event: 'mythic-dice', text: vis(page.dice.cta) })}
-    ${anchor({ href: links['discord-invite'], text: vis(page.dice.secondary) })}
-  </p>
+  <div class="dice-card">
+    <h2 class="bar" id="dice-h">${vis(page.dice.title)}</h2>
+    <p class="line">${vis(page.dice.line)}</p>
+    <p class="dice-actions">
+      ${anchor({ className: 'btn btn-primary', href: links['mythic-dice'], event: 'mythic-dice', text: vis(page.dice.cta) })}
+      ${anchor({ href: links['discord-invite'], text: vis(page.dice.secondary) })}
+    </p>
+  </div>
 </section>`
 }
 
