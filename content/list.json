@@ -69,7 +69,7 @@
       "hook": "Dreamwalk into a friend's nightmares and face their fears together. 16 printer-friendly pages, hand drawn and inked on paper, born in the Gold & Glory community.",
       "credit": "",
       "cover": "while-you-sleep-cover",
-      "cover_alt": "[LOREM — copy slot: alt: While You Sleep cover]",
+      "cover_alt": "While You Sleep cover: in black ink, a robed figure dangles an eye-shaped pendulum and rests a hand on a sleeper's head, framed by a glowing dream-cloud.",
       "link": "https://gm-manny.itch.io/while-you-sleep",
       "newest": false
     },
@@ -81,7 +81,7 @@
       "hook": "A lusty satyr, a stolen queen, and a lost kingdom swallowed by a twisted forest. Yes, there's an actual fiddle, and yes, it's magical.",
       "credit": "Made for the Weird Tales Shadowdark Game Jam 2024.",
       "cover": "fiddler-in-the-bush-cover",
-      "cover_alt": "[LOREM — copy slot: alt: Fiddler In The Bush cover]",
+      "cover_alt": "Fiddler in the Bush cover: in colored pencil, a horned, red-haired satyr leans toward a woman with closed eyes. A 2nd-level adventure for Shadowdark RPG.",
       "link": "https://gm-manny.itch.io/fiddler-in-the-bush",
       "newest": true
     },
@@ -89,24 +89,24 @@
       "type": "art",
       "id": "haiyum-head",
       "image": "haiyum-head",
-      "caption": "[LOREM — copy slot: caption: haiyum-head ([Piece name] · [what it was for])]",
-      "alt": "[LOREM — copy slot: alt: haiyum-head]",
+      "caption": "Haiyum Head · Ink and colored pencil",
+      "alt": "Ink and colored-pencil portrait of Haiyum, a bald, lumpy-faced figure with wide staring eyes, a tight pink smile, and a spiral knob on its chin.",
       "home": true
     },
     {
       "type": "art",
       "id": "three-eyed-diva",
       "image": "three-eyed-diva",
-      "caption": "[LOREM — copy slot: caption: three-eyed-diva ([Piece name] · [what it was for])]",
-      "alt": "[LOREM — copy slot: alt: three-eyed-diva]",
+      "caption": "Three Eyed Diva · Stippled ink",
+      "alt": "Stippled ink drawing of the Three Eyed Diva: long wavy hair, three eyes, a fanged grin with a lolling tongue, and clawed hands throwing the horns.",
       "home": true
     },
     {
       "type": "art",
       "id": "lizardman-warrior",
       "image": "lizardman-warrior",
-      "caption": "[LOREM — copy slot: caption: lizardman-warrior ([Piece name] · [what it was for])]",
-      "alt": "[LOREM — copy slot: alt: lizardman-warrior]",
+      "caption": "Lizardman Warrior · Ink",
+      "alt": "Rough black ink drawing of a spiny-crested, scaly lizardman warrior mid-swing with a huge curved blade.",
       "home": true
     }
   ]

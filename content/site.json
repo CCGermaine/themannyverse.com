@@ -1,7 +1,7 @@
 {
   "wordmark": "The Mannyverse",
   "person": "GM Manny",
-  "skip_link": "[LOREM — copy slot: skip link]",
+  "skip_link": "Skip to content",
   "meta": {
     "title": "The Mannyverse · Online Tabletop Games with GM Manny",
     "description": "Weekly online Shadowdark, Mothership, and Mythic Bastionland with GM Manny. Strange mysteries, hand-drawn maps, and a community to come home to.",
@@ -27,7 +27,7 @@
   "proof": "490+ games on StartPlaying · 5 stars",
   "open_now": {
     "title": "Open seats",
-    "intro": "Grab a seat at the table and see if you can ...",
+    "intro": "Grab a seat at the table and see if you can make it out alive.",
     "more": "See every table",
     "all_full_title": "Every table's full. For now.",
     "all_full_line": "New seats get posted in #open-seats on our Discord. Hop in, say hoy, and you'll see the next one.",
@@ -45,9 +45,9 @@
     "full_secondary": "Watch this table"
   },
   "stat_labels": {
-    "system": "[LOREM — copy slot: stat label: system]",
-    "when": "[LOREM — copy slot: stat label: when]",
-    "price": "[LOREM — copy slot: stat label: price]"
+    "system": "System",
+    "when": "When",
+    "price": "Price"
   },
   "gold_glory": {
     "title": "Gold & Glory",
@@ -69,7 +69,7 @@
     "title": "The Tables",
     "intro": "Weekly online games, story first, with times shown in your time zone. New players are always welcome. We'll roll up characters together and I'll teach as we go.",
     "session": {
-      "heading": "[LOREM — copy slot: session strip heading]",
+      "heading": "How a session works",
       "line": "Every week we gather in Discord voice, play on Owlbear Rodeo, and tell a story for about three hours.",
       "steps": [
         {
@@ -102,7 +102,7 @@
       "store_cta": "See all zines on itch.io"
     },
     "gallery": {
-      "heading": "[LOREM — copy slot: gallery heading]",
+      "heading": "From the sketchbook",
       "line": "Drawn for the table. Every map, token, and portrait here started on paper for a game I ran.",
       "commissions_line": "Want something drawn for your table? Commissions are open. Ask me on Discord and we'll talk shop.",
       "commissions_cta": "Ask about a commission",
@@ -116,7 +116,7 @@
       "secondary": "Talk shop on Discord"
     }
   },
-  "theme_toggle": "[LOREM — copy slot: theme toggle]",
+  "theme_toggle": "Dark mode",
   "support": {
     "label": "Support",
     "title": "Keep the Dice Rolling",
@@ -135,15 +135,15 @@
   "images": {
     "hero": {
       "file": "hollow-king",
-      "alt": "[LOREM — copy slot: alt: hero, Hollow King head]"
+      "alt": "Ink and colored-pencil Hollow King: a gaunt blue-grey face with hollow black eyes and a screaming, toothy mouth, under a gold crown set with one red eye."
     },
     "open_now": {
       "file": "open-door-temple",
-      "alt": "[LOREM — copy slot: alt: Order of the Open Door temple]"
+      "alt": "Ink drawing of the Order of the Open Door temple, a domed tower on a rocky crag, its stair winding up against a huge full moon and a starry sky."
     },
     "gold_glory_banner": {
       "file": "gg-banner",
-      "alt": "[LOREM — copy slot: alt: Gold & Glory banner (say the words on it)]"
+      "alt": "Gold & Glory banner: the words \"Gold\" and \"Glory\" in ornate gothic letters either side of a grinning, helmeted skull in a glowing green ring, on black."
     }
   }
 }
