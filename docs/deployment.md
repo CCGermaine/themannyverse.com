@@ -7,7 +7,7 @@
 - **Visibility**: Public
 - **Local path**: `/home/manny/Work/themannyverse.com/`
 - **Default branch**: `main`
-- **Live site**: still the build on `main`. The redesign ships when that branch is merged. A local build does not publish.
+- **Live site**: the build on `main`. The redesign launched on 2026-10-12. A local build does not publish.
 
 ### Live URLs
 - **Custom domain**: https://themannyverse.com
@@ -15,7 +15,7 @@
 - **GitHub Pages project URL**: `https://ccgermaine.github.io/themannyverse.com/` redirects to the apex
 
 ### What's deployed
-Once the redesign is on `main`: Home, Games (`/games/`), Art & Zines (`/art-zines/`), and `404.html`, plus `robots.txt` and `sitemap.xml`. Pages are prerendered from `content/`. Seats stay on StartPlaying. Support is three text links. GoatCounter is included only when a site code is set.
+Home, Games (`/games/`), Art & Zines (`/art-zines/`), and `404.html`, plus `robots.txt` and `sitemap.xml`. Pages are prerendered from `content/`. Seats stay on StartPlaying. Support is three text links. GoatCounter is on (site code `manny` in `content/site.json`).
 
 The Art & Zines page is part of this build. Cherating is still hidden: no page and no line.
 
@@ -45,12 +45,11 @@ HTTPS: on
 | A | themannyverse.com | 185.199.110.153 | 600 |
 | A | themannyverse.com | 185.199.111.153 | 600 |
 | CNAME | *.themannyverse.com | ccgermaine.github.io/themannyverse.com | 600 |
-| CNAME | www.themannyverse.com | see the note under this table | 600 |
 | MX | themannyverse.com | fwd1.porkbun.com (prio: 10) | 600 |
 | MX | themannyverse.com | fwd2.porkbun.com (prio: 20) | 600 |
 | TXT | themannyverse.com | v=spf1 include:_spf.porkbun.com ~all | 600 |
 
-History: on 2026-10-07 the `www` CNAME target was not a hostname, so the name did not resolve. That note is stale. On 2026-10-12 `https://www.themannyverse.com` answered 301 to `https://themannyverse.com/`.
+`www.themannyverse.com` answers 301 to `https://themannyverse.com/` (checked 2026-10-12).
 
 ## Technical notes
 
@@ -64,7 +63,7 @@ History: on 2026-10-07 the `www` CNAME target was not a hostname, so the name di
 `public/.nojekyll` is copied into `dist/`.
 
 ### ALIAS record
-Porkbun's ALIAS record did not resolve on public DNS. It was replaced with the four A records above. History is in [DNS Progress](dns.md).
+Porkbun's ALIAS record did not resolve on public DNS. It was replaced with the four A records above. See [DNS](dns.md).
 
 ## Project structure
 
@@ -75,7 +74,7 @@ themannyverse.com/
 ├── art-zines/index.html
 ├── 404.html
 ├── README.md
-├── AGENTS.md
+├── AGENTS.md          (CLAUDE.md is a symlink to it)
 ├── package.json
 ├── vite.config.js
 ├── content/
@@ -88,6 +87,9 @@ themannyverse.com/
 │   ├── prerender-plugin.js
 │   ├── render.js
 │   └── webp-size.js
+├── scripts/
+│   └── check-content.mjs
+├── test/
 ├── src/
 │   ├── main.js
 │   ├── when.js
@@ -99,7 +101,7 @@ themannyverse.com/
 │   ├── favicon.svg
 │   ├── art/
 │   ├── fonts/
-│   └── og/
+│   └── og/og-1200x630.png
 ├── docs/
 └── .github/workflows/
     └── deploy.yml
@@ -118,5 +120,3 @@ npm run preview
 ## Still open
 
 - Cherating stays hidden until there is a package to publish
-- GoatCounter stays off until a site code is saved in `content/site.json`
-- Copy slots marked in the content files still need Quill's lines. The production build rejects them.

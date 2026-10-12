@@ -39,7 +39,7 @@ GitHub Pages
 
 - `main` holds source only. `dist/` is gitignored
 - There is no `gh-pages` branch. Pages serves the workflow artifact
-- Work for the redesign lands on a branch. Merging to `main` deploys.
+- Work lands on a branch. Merging or pushing to `main` deploys.
 
 ## Configuration in place
 

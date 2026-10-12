@@ -24,4 +24,4 @@ Visual reference: `docs/site-sections.md` plus the M4 shots (390 and 1440, light
 Work on a branch. `main` deploys. Push only when the brief says. Never force-push. Never run `gh workflow run`.
 
 ## Verify
-Build with `ALLOW_LOREM=1 npm run build` until the copy slots are filled. Preview in the background (`npx vite preview --port 4173 --strictPort`). Playwright at 390 and 1440, light and dark, with a 60 second timeout on each action and `timeout 300` around the run. No horizontal scroll. Stop the server.
+Build with `npm run build` (copy slots are filled; `ALLOW_LOREM=1` is only for local drafts). Preview in the background (`npx vite preview --port 4173 --strictPort`). Playwright at 390 and 1440, light and dark, with a 60 second timeout on each action and `timeout 300` around the run. No horizontal scroll. Stop the server.
