@@ -190,7 +190,7 @@ test('A14 meta and JSON-LD', () => {
   assert.equal(data['@graph'][1].name, 'GM Manny')
   assert.equal(data['@graph'][1].description, 'Professional GM, Artist, Nerd, Hubby.')
   assert.ok(data['@graph'][1].sameAs.includes(INVITE))
-  assert.doesNotMatch(renderFooter(model), /<script[^>]*goatcounter/)
+  assert.match(renderFooter(model), /<script data-goatcounter="https:\/\/manny\.goatcounter\.com\/count" async src="\/\/gc\.zgo\.at\/count\.js"><\/script>/)
 })
 
 test('A15 GoatCounter script and click attributes', () => {
@@ -201,21 +201,24 @@ test('A15 GoatCounter script and click attributes', () => {
     ['404', renderNotFound],
   ]
   const empty = realModel()
-  assert.equal(empty.site.analytics.goatcounter, '')
+  empty.site = structuredClone(empty.site)
+  empty.site.analytics = { goatcounter: '' }
   for (const [name, renderMain] of pages) {
     const html = renderHeader(name === 'art' ? 'art' : name === 'games' ? 'games' : name === '404' ? '404' : 'home', empty) + renderMain(empty) + renderFooter(empty)
     assert.equal((html.match(/<script\b/g) || []).length, 0, `${name} emits a script when the code is empty`)
   }
 
   const set = realModel()
+  assert.equal(set.site.analytics.goatcounter, 'manny')
   set.site = structuredClone(set.site)
-  set.site.analytics = { goatcounter: 'themannyverse' }
-  const script = '<script data-goatcounter="https://themannyverse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+  set.site.analytics = { goatcounter: 'manny' }
+  const script = '<script data-goatcounter="https://manny.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
   const rendered = []
   for (const [name, renderMain] of pages) {
     const pageName = name === 'art' ? 'art' : name === '404' ? '404' : name === 'games' ? 'games' : 'home'
     const html = renderHeader(pageName, set) + renderMain(set) + renderFooter(set)
     assert.equal((html.match(/<script\b/g) || []).length, 1, `${name} script count`)
+    assert.equal((html.match(/gc\.zgo\.at\/count\.js/g) || []).length, 1, `${name} count.js`)
     assert.equal((html.match(/data-goatcounter="/g) || []).length, 1, `${name} count script`)
     assert.ok(html.includes(script), `${name} script tag`)
     rendered.push(html)
@@ -223,7 +226,7 @@ test('A15 GoatCounter script and click attributes', () => {
 
   const allFull = withStates(['full', 'full', 'full', 'full'])
   allFull.site = structuredClone(allFull.site)
-  allFull.site.analytics = { goatcounter: 'themannyverse' }
+  allFull.site.analytics = { goatcounter: 'manny' }
   rendered.push(renderHome(allFull) + renderGames(allFull))
 
   const clicks = new Set()
