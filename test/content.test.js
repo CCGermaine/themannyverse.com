@@ -25,13 +25,19 @@ test('JSON parse errors name the file, line, and column', () => {
   assert.match(message, /^content\/list.json: line \d+, column \d+: /)
 })
 
-test('real content passes with ALLOW_LOREM and fails without it', () => {
+test('real content passes, and rejects leftover LOREM unless allowed', () => {
   const loaded = loadContent(root)
   const open = validate(loaded, { allowLorem: true })
   assert.deepEqual(open.errors, [], open.errors.join('\n'))
+  const blob = JSON.stringify(loaded.site) + JSON.stringify(loaded.list) + String(loaded.about)
+  const hasLorem = blob.includes('[LOREM') || blob.includes('[PLACEHOLDER')
   const closed = validate(loaded, { allowLorem: false })
-  assert.ok(closed.errors.length > 0)
-  assert.match(closed.errors.join('\n'), /must not contain \[LOREM or \[PLACEHOLDER/)
+  if (hasLorem) {
+    assert.ok(closed.errors.length > 0)
+    assert.match(closed.errors.join('\n'), /must not contain \[LOREM or \[PLACEHOLDER/)
+  } else {
+    assert.deepEqual(closed.errors, [], closed.errors.join('\n'))
+  }
 })
 
 test('the 16 allowed art files pass the forbidden-art guard', () => {
@@ -94,14 +100,19 @@ test('each A3 fixture fails with its own message', () => {
   }
 })
 
-test('check script exits 1 without ALLOW_LOREM and 0 with it', () => {
-  const fail = spawnSync(process.execPath, ['scripts/check-content.mjs'], { cwd: root, encoding: 'utf8' })
-  assert.notEqual(fail.status, 0)
-  assert.match(fail.stderr, /\[LOREM/)
-  const ok = spawnSync(process.execPath, ['scripts/check-content.mjs'], {
+test('check script follows leftover LOREM and passes when allowed', () => {
+  const plain = spawnSync(process.execPath, ['scripts/check-content.mjs'], { cwd: root, encoding: 'utf8' })
+  const allowed = spawnSync(process.execPath, ['scripts/check-content.mjs'], {
     cwd: root,
     encoding: 'utf8',
     env: { ...process.env, ALLOW_LOREM: '1' },
   })
-  assert.equal(ok.status, 0, ok.stderr || ok.stdout)
+  assert.equal(allowed.status, 0, allowed.stderr || allowed.stdout)
+  const blob = readFileSync(join(root, 'content/site.json'), 'utf8') + readFileSync(join(root, 'content/list.json'), 'utf8')
+  if (blob.includes('[LOREM') || blob.includes('[PLACEHOLDER')) {
+    assert.notEqual(plain.status, 0)
+    assert.match(plain.stderr, /\[LOREM/)
+  } else {
+    assert.equal(plain.status, 0, plain.stderr || plain.stdout)
+  }
 })
