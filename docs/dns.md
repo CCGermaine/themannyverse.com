@@ -4,7 +4,7 @@
 
 https://themannyverse.com returned **200** over HTTPS. The certificate GitHub was still provisioning on 2026-09-26 is in place. The four apex A records still answer `185.199.108.153` through `185.199.111.153`, TTL 600. MX and the SPF TXT match the log below. Nameservers are still Porkbun.
 
-`www.themannyverse.com` and the wildcard are published as CNAMEs to `ccgermaine.github.io/themannyverse.com`. That target is not a hostname, so neither name resolves to an address. The apex is the URL that works. The 2026-09-26 log below is the troubleshooting record. It lists the wildcard and omits `www`, which is published now with the same target.
+`www.themannyverse.com` 301-redirects to the apex. Rechecked 2026-10-12: `https://www.themannyverse.com` answered `301` with `location: https://themannyverse.com/`. The 2026-10-07 note that `www` did not resolve is stale. The 2026-09-26 log below is the troubleshooting record for the apex A records. It lists the wildcard and omits `www`.
 
 ## Current Status (as of 2026-09-26 12:30 UTC)
 

@@ -1,0 +1,55 @@
+{
+  "discord-invite": "https://discord.gg/w74xbPHEC4",
+  "discord-open-seats": "https://discord.gg/WW7VNcGN5s",
+  "sp-profile": "https://startplaying.games/gm/manny",
+  "itch-store": "https://gm-manny.itch.io/",
+  "mythic-dice": "https://github.com/CCGermaine/Mythic-Dice",
+  "instagram": "https://www.instagram.com/christiangermaine/",
+  "support": [
+    {
+      "name": "Stripe",
+      "url": "https://book.stripe.com/9B600jblT26f3yY9CD4AU00",
+      "line": "Pay by card"
+    },
+    {
+      "name": "PayPal",
+      "url": "https://www.paypal.com/ncp/payment/DGEZEC82THVWC",
+      "line": "Pay with PayPal"
+    },
+    {
+      "name": "Wise",
+      "url": "https://wise.com/pay/me/christiancharlesg3",
+      "line": "Bank transfer, low fees worldwide"
+    }
+  ],
+  "socials": [
+    {
+      "name": "StartPlaying",
+      "url": "https://startplaying.games/gm/manny"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.gg/w74xbPHEC4"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/christiangermaine/"
+    },
+    {
+      "name": "X",
+      "url": "https://x.com/ChristianCGer"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/GMManny82/"
+    },
+    {
+      "name": "itch.io",
+      "url": "https://gm-manny.itch.io/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/CCGermaine?tab=repositories"
+    }
+  ]
+}
